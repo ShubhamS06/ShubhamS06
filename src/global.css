@@ -1,0 +1,56 @@
+:root {
+  --color-primary-1: #F27F0C;
+  --color-primary-2: #F69B40;
+  --color-white: #FFFFFF;
+
+  /* TODO: */
+  --bg-body: #18191b;
+  --bg-body-tr: #18191b20;
+  --bg-gray: #3A3B3C;
+  --bg-primary: #000;
+  --border-primary: #000;
+  --font-main: "Open Sans";
+
+  --font-size-base: 15px;
+  font-size: 15px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-main), system-ui !important;
+}
+
+body {
+  background: var(--bg-body);
+  color: #c6c7c9;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+img {
+  max-width: 100%;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid currentColor;
+  margin: 1em 0;
+  padding: 0;
+}
+
+@media screen and (max-width: 1500px) {
+  :root {
+    font-size: 12px;
+  }
+}

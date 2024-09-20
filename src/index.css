@@ -1,0 +1,50 @@
+#page {
+    --navbar-margin: 5.5rem;
+    inset: 0;
+    padding-top: var(--navbar-margin);
+    scroll-padding-top: var(--navbar-margin);
+    height: calc(100vh - var(--navbar-margin));
+    max-height: calc(100vh - var(--navbar-margin));
+    width: 100vw;
+    overflow-y: scroll;
+}
+
+.range,
+.range-bg {
+    height: .5rem;
+    border-radius: 10px;
+}
+
+.bg-2circle {
+    position: fixed;
+    width: 100vw !important;
+    height: 100vh !important;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background: var(--bg-body);
+    pointer-events: none;
+    filter: blur(5px);
+    transform: rotate(30deg) scale(1.5);
+    z-index: -1;
+}
+
+.bg-2circle>*:first-child,
+.bg-2circle>*:last-child {
+    content: "";
+    z-index: -1;
+    width: 30vw;
+    height: 30vw;
+    aspect-ratio: 1;
+    border-radius: 50%;
+}
+
+.bg-2circle>*:first-child {
+    background: radial-gradient(#053F5C33 20%, transparent 50%);
+    opacity: .5;
+}
+
+.bg-2circle>*:last-child {
+    background: radial-gradient(#F27F0C1A 20%, transparent 50%);
+    opacity: .5;
+}

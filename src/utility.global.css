@@ -1,0 +1,330 @@
+.flex {
+    display: flex !important;
+}
+
+.d-contents {
+    display: contents;
+}
+
+.relative {
+    position: relative;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.flex-wrap-reverse {
+    flex-wrap: wrap-reverse;
+}
+
+.flex-1 {
+    flex: 1 1 0%;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.grid-col {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.items-start {
+    align-items: flex-start;
+}
+
+.items-end {
+    align-items: flex-end;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.justify-evenly {
+    justify-content: space-evenly;
+}
+
+.justify-end {
+    justify-content: end;
+}
+
+.ms-auto {
+    margin-left: auto !important;
+}
+
+.me-auto {
+    margin-right: auto !important;
+}
+
+.mt-auto {
+    margin-top: auto !important;
+}
+
+.mb-auto {
+    margin-bottom: auto !important;
+}
+
+.mx-auto {
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.h-fit {
+    height: fit-content !important;
+}
+
+.min-h-100h {
+    min-height: 100vh !important;
+}
+
+.h-full {
+    height: 100% !important;
+}
+
+.w-full {
+    width: 100% !important;
+}
+
+.w-half {
+    width: 50% !important;
+}
+
+.min-w-half {
+    min-width: 50% !important;
+}
+
+.min-w-32 {
+    min-width: 8rem !important;
+}
+
+.max-w-full {
+    max-width: 100% !important;
+}
+
+.w-fit {
+    width: fit-content !important;
+}
+
+.w-max {
+    width: max-content !important;
+}
+
+.w-min {
+    width: min-content !important;
+}
+
+.font-base {
+    font-size: var(--font-size-base) !important;
+}
+
+.font-half {
+    font-size: calc(var(--font-size-base) / 2) !important;
+}
+
+.font-lg {
+    font-size: calc(var(--font-size-base) * 1.3333) !important;
+}
+
+.font-25 {
+    font-size: calc(var(--font-size-base) * 1.6666) !important;
+}
+
+.font-thin {
+    font-weight: 300;
+}
+
+.font-bold {
+    font-weight: 600;
+}
+
+.font-bolder {
+    font-weight: 700;
+}
+
+.cursor-pointer {
+    cursor: pointer !important;
+}
+
+.capitalize {
+    text-transform: capitalize !important;
+}
+
+.uppercase {
+    text-transform: uppercase !important;
+}
+
+.text-white {
+    color: var(--color-white) !important;
+}
+
+.text-dim {
+    font-weight: 300;
+    color: #E4E4E433 !important;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.text-justify {
+    text-align: justify !important;
+}
+
+.text-left {
+    text-align: left !important;
+}
+
+.text-right {
+    text-align: right !important;
+}
+
+.text-trunc {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+[data-hide="true"],
+.hide {
+    display: none;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.overflow-x-hidden {
+    overflow-x: hidden;
+}
+
+.overflow-x-auto {
+    overflow-x: auto;
+}
+
+.overflow-y-auto {
+    overflow-y: auto;
+}
+
+.overflow-y-hidden {
+    overflow-y: hidden;
+}
+
+.border-none {
+    border: none;
+}
+
+.outline-none {
+    outline: none;
+}
+
+.border-transparent {
+    border-color: transparent;
+}
+
+.border-current-color {
+    border-color: currentColor;
+}
+
+.aspect-square {
+    aspect-ratio: 1 / 1 !important;
+}
+
+.transition {
+    transition: all .3s;
+}
+
+.transition-md {
+    transition: all .5s;
+}
+
+.transition-lg {
+    transition: all 1s ease-in-out;
+}
+
+.duration-2 {
+    transition-duration: 2s;
+}
+
+.bg-primary {
+    background-color: var(--color-primary-1);
+}
+
+.bg-gray {
+    background-color: var(--bg-gray);
+}
+
+.bg-blur {
+    background: linear-gradient(132.5deg, rgba(239, 239, 239, 0.12) -24.93%, rgba(255, 255, 255, 0.02) 109.66%);
+    backdrop-filter: blur(0.525px);
+}
+
+.active-press:active {
+    scale: .95;
+    translate: -2.5% -2.5%;
+}
+
+.absolute-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.stack {
+    display: grid;
+    place-content: center;
+}
+
+.grid-center-child {
+    display: grid;
+    place-content: center;
+    align-items: center;
+}
+
+.stack>* {
+    grid-area: 1 / 1;
+}
+
+.stack>.stack-bg {
+    z-index: -1;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+::-webkit-scrollbar {
+    display: none;
+    width: 0px;
+    height: 0px;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+:root {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+/* DEV: */
+.dev {
+    outline: 1px solid #ff000050;
+    outline-offset: -1px;
+}
+
+.dev:nth-child(even) {
+    outline-color: #0000ff50;
+}

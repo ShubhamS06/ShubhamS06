@@ -1,0 +1,48 @@
+.container {
+    transition: 2s all;
+    width: fit-content;
+}
+
+.bgWrapper {
+    width: min(80vw, 80vh);
+    aspect-ratio: 1;
+    align-items: center;
+}
+
+.hexBg {
+    width: 100%;
+    transition-delay: .5s;
+}
+
+.hexBorder {
+    transition-delay: 2s;
+    width: 90%;
+}
+
+.item,
+.hexBorder {
+    opacity: 0;
+    transition-delay: 1s;
+}
+
+.container[data-visible="false"] .hexBg {
+    transform: rotate(90deg);
+}
+
+.container[data-visible="false"] .hexBorder {
+    transform: scale(.5) translate(-100%, -100%);
+}
+
+.container[data-visible="true"] .hexBorder,
+.container[data-visible="true"] .item {
+    opacity: 1;
+}
+
+.item {
+    font-size: 1.2rem;
+    transform: rotate(var(--degree)) translateX(30%) rotate(calc(var(--degree) * -1)) translateX(42%);
+}
+
+.item>* {
+    width: min-content;
+}

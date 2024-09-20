@@ -1,0 +1,152 @@
+.container {
+    background: var(--bg-body);
+    position: absolute;
+    inset: 0;
+    z-index: 10000;
+    overflow: hidden;
+}
+
+.container[data-show="false"] {
+    transform: translateY(-100%);
+}
+
+.content {
+    display: grid;
+    justify-content: center;
+    padding: 2vw;
+    grid-template-columns: 1fr;
+}
+
+.container[data-step^="card-"] .content {
+    align-items: center;
+    grid-template-rows: 1fr;
+    grid-template-areas: "card";
+}
+
+.container[data-step^="hello-"] .content {
+    align-items: center;
+    /* grid-template-rows: auto 4fr; */
+    grid-template-rows: auto 4fr 2fr;
+    grid-template-areas:
+        "card"
+        "greet"
+        "goto";
+}
+
+.container[data-step^="goto-"] .content {
+    align-items: center;
+    grid-template-rows: auto 4fr 2fr;
+    grid-template-areas:
+        "card"
+        "greet"
+        "goto";
+}
+
+.greet {
+    transition-delay: .5s;
+    font-size: calc(var(--font-size-base) * 11.66);
+    color: #ececec;
+    grid-area: greet;
+}
+
+.content>*:first-child {
+    transition: all .5s ease-in-out;
+    grid-area: card;
+    transform: scale(5);
+}
+
+.greet,
+.buttonGoto {
+    transition: 1s all;
+    display: none;
+    transform: scaleY(0) translateY(50%);
+}
+
+.buttonGoto {
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    grid-area: goto;
+}
+
+.container[data-step^="hello-"] .content>*:first-child,
+.container[data-step^="goto-"] .content>*:first-child {
+    transform: scale(1);
+}
+
+.container[data-step^="hello-"] .greet,
+.container[data-step^="goto-"] .greet,
+.container[data-step^="goto-"] .buttonGoto {
+    display: block;
+    transform: scaleY(1) translateY(0);
+}
+
+.container[data-step="hello-enter"] .greet {
+    opacity: .2;
+    margin-top: auto;
+    transform: scaleY(0) translateY(80%) !important;
+}
+
+.container[data-step="hello-down"] .greet {
+    transform: scaleY(1) translateY(50%) !important;
+}
+
+.buttonGoto>img {
+    animation: blink 3s infinite cubic-bezier(0, 0, 0, 1);
+}
+
+.buttonGoto>img:nth-child(2) {
+    animation-delay: 1s;
+}
+
+.buttonGoto>img:nth-child(3) {
+    animation-delay: 2s;
+}
+
+@keyframes blink {
+    50% {
+        opacity: .3;
+    }
+}
+
+.bg {
+    width: 100vw !important;
+    height: 100vh !important;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background: var(--bg-body);
+    animation: circle-anim 5s infinite linear;
+    pointer-events: none;
+    filter: blur(5px);
+    scale: 1.2;
+}
+
+.bg>*:first-child,
+.bg>*:last-child {
+    content: "";
+    z-index: -1;
+    width: 30vw;
+    height: 30vw;
+    aspect-ratio: 1;
+    border-radius: 50%;
+}
+
+.bg>*:first-child {
+    background: radial-gradient(#053F5C33 20%, transparent 50%);
+    opacity: .5;
+}
+
+.bg>*:last-child {
+    background: radial-gradient(#F27F0C1A 20%, transparent 50%);
+    opacity: .5;
+}
+
+@keyframes circle-anim {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

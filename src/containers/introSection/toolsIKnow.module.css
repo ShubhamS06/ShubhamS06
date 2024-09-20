@@ -1,0 +1,55 @@
+.container,
+.bottomCard,
+.cardGroup {
+    gap: 1.5rem;
+}
+
+.card {
+    width: 18vw;
+    gap: .5rem;
+}
+
+.card>div:first-of-type {
+    font-weight: 400;
+    gap: .5rem;
+}
+
+.card>div:first-of-type img {
+    width: 4rem;
+}
+
+.card,
+.bottomCard {
+    padding: 1rem 1.5rem;
+    background: linear-gradient(132.5deg, rgba(239, 239, 239, 0.12) -24.93%, rgba(255, 255, 255, 0.02) 109.66%);
+    border-radius: 1.66rem;
+}
+
+.bottomCard {
+    width: 85%;
+}
+
+.card {
+    padding-bottom: .2rem;
+}
+
+.container [data-hide] {
+    transition: 1s all;
+    transition-delay: .2s;
+}
+
+.container[data-visible="false"] [data-hide] {
+    opacity: 0;
+}
+
+.container[data-visible="false"] [data-hide="left"] {
+    transform: translate(-50%, 50%);
+}
+
+.container[data-visible="false"] [data-hide="right"] {
+    transform: translate(50%, 50%);
+}
+
+.container[data-visible="false"] [data-hide="down"] {
+    transform: translateY(50%);
+}

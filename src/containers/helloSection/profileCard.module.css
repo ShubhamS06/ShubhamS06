@@ -1,0 +1,141 @@
+.card {
+    font-size: 15px;
+    --width: 3.76em;
+    --degree: 0deg;
+    padding: .1em .4em;
+    display: grid;
+    gap: 0.5em;
+    grid-template-rows: auto;
+    align-items: center;
+    grid-template-areas: "pic content";
+    width: var(--width);
+    aspect-ratio: 1;
+    border-radius: calc(var(--width) / 10);
+    position: relative;
+    z-index: 10;
+}
+
+.card[data-step="card-pic-2"],
+.card[data-step="card-pic"] {
+    aspect-ratio: 1;
+    background: transparent;
+    grid-template-columns: calc(10em / 2.4 - .4em) 1px;
+}
+
+.card[data-step="card-pic-2"] {
+    grid-template-columns: calc(10em / 2.4 - .4em) calc(60% - .4em);
+    background: transparent;
+}
+
+.card[data-step="card-pic-2"] .content {
+    transform: scaleX(0);
+}
+
+.card[data-step="card-pic"] .content {
+    transform: scaleX(0);
+}
+
+.card[data-step="card"],
+.card[data-step="card-border-anim"],
+.card[data-step="card-pic-text"] {
+    --width: 10em;
+    grid-template-columns: calc(10em / 2.4 - .4em) calc(60% - .4em);
+    aspect-ratio: 2.4;
+}
+
+.card[data-step="card-pic-text"] {
+    background: transparent;
+}
+
+.card>img {
+    grid-area: pic;
+}
+
+.content {
+    grid-area: content;
+    overflow: hidden;
+    gap: .2em;
+}
+
+.name {
+    color: #e4e4e4;
+}
+
+.name,
+.role {
+    text-overflow: clip !important;
+}
+
+.role {
+    font-weight: 300;
+    color: #F7AD19;
+}
+
+
+.card[data-step="card-border-anim"]>.bg2,
+.card[data-step="card"]>.bg2 {
+    background-color: blue;
+    z-index: -1;
+    border-radius: calc(var(--width) / 10);
+    width: calc(100% - .1em);
+    background: linear-gradient(132.5deg, rgba(239, 239, 239, 0.12) -24.93%, rgba(255, 255, 255, 0.02) 109.66%);
+    background-color: var(--bg-body);
+    height: calc(100% - .05em);
+}
+
+.card[data-step="card-border-anim"]>.bg2 {
+    background: linear-gradient(286.23deg, rgba(239, 239, 239, 0.18) -0.05%, rgba(255, 255, 255, 0.03) 96.47%);
+    background-color: var(--bg-body);
+    animation: hue-spin 3s linear infinite;
+    animation-delay: 1s;
+}
+
+@keyframes hue-spin {
+    from {
+        filter: hue-rotate(0deg);
+    }
+
+    to {
+        filter: hue-rotate(360deg);
+    }
+}
+
+.card[data-step="card-border-anim"]>.bg {
+    display: grid;
+    z-index: -1;
+
+    --border-angle: 0turn;
+    border-radius: calc(var(--width) / 10);
+    --main-bg: conic-gradient(from var(--border-angle), transparent 25%, #efefef, #efefef 99%, transparent);
+    --gradient-border: conic-gradient(from var(--border-angle), transparent 25%, #efefef, #efefef 99%, transparent);
+
+    background:
+
+        var(--main-bg) padding-box,
+
+        var(--gradient-border) border-box,
+
+        var(--main-bg) border-box;
+
+    background-position: center center;
+
+    animation: bg-spin 3s linear infinite;
+
+}
+
+@keyframes bg-spin {
+    to {
+        --border-angle: 1turn;
+    }
+}
+
+.card:hover {
+    animation-play-state: paused;
+}
+
+
+@property --border-angle {
+    syntax: "<angle>";
+    inherits: true;
+    initial-value: 0turn;
+}
