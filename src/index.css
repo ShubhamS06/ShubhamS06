@@ -6,9 +6,33 @@
     height: calc(100vh - var(--navbar-margin));
     max-height: calc(100vh - var(--navbar-margin));
     width: 100vw;
-    overflow-y: scroll;
+    overflow-y: hidden;
+    /* overflow-y: scroll; */
 }
-
+.tech_logos {
+    /* animation: spin 2s linear infinite; */
+    height: 80px;
+    width: 80px;
+    background: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .spin_logo{
+    animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
 .range,
 .range-bg {
     height: .5rem;
@@ -47,4 +71,17 @@
 .bg-2circle>*:last-child {
     background: radial-gradient(#F27F0C1A 20%, transparent 50%);
     opacity: .5;
+}
+.tooltip{
+    position: absolute;
+    /* border: 1px solid; */
+    padding: 20px;
+    min-width: 200px;
+    width: 300px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #C6C7C9;
+    color: black;
+    opacity: 1;
+    z-index: 2;
 }

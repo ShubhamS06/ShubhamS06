@@ -40,8 +40,10 @@ export default function HelloSection({ id, show, goto }: Props) {
             <div className={`${styles.content} transition-lg w-full h-full`}>
                 <ProfileCard step={!steps[activeStep] || steps[activeStep].startsWith("card-") ? steps[activeStep] : "card"} />
 
-                <div className={`${styles.greet} font-bolder text-center`}>Hello!</div>
-
+                <h1 className={`${styles.greet} font-bolder text-center`}>
+                    <span>H</span><span>e</span><span>l</span><span>l</span><span>o</span> <span>!</span>
+                </h1>
+            
                 <div className="mx-auto grid-center-child">
                     <button onClick={() => goto("next")} className={`${styles.buttonGoto} flex flex-col bg-blur w-fit mx-auto`}>
                         <img src="/icons/arrow-3-down.svg" alt="" />

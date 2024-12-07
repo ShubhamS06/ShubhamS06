@@ -14,7 +14,10 @@
     position: relative;
     z-index: 10;
 }
-
+.brandImg{
+    background-color: #67c425;
+    border-radius: 50%;
+}
 .card[data-step="card-pic-2"],
 .card[data-step="card-pic"] {
     aspect-ratio: 1;
@@ -38,9 +41,11 @@
 .card[data-step="card"],
 .card[data-step="card-border-anim"],
 .card[data-step="card-pic-text"] {
-    --width: 10em;
-    grid-template-columns: calc(10em / 2.4 - .4em) calc(60% - .4em);
+    --width: 15em;
+    grid-template-columns: calc(10em / 2.4 - .4em) calc(60%);
+    /* grid-template-columns: calc(10em / 2.4 - .4em) calc(60% - .4em); */
     aspect-ratio: 2.4;
+    padding-left: 1em;
 }
 
 .card[data-step="card-pic-text"] {
@@ -68,7 +73,9 @@
 
 .role {
     font-weight: 300;
-    color: #F7AD19;
+    color: #67c425;
+    /* font-size: 28px; */
+    /* color: #F7AD19; */
 }
 
 
@@ -139,3 +146,5 @@
     inherits: true;
     initial-value: 0turn;
 }
+
+/* @import url("https://fonts.googleapis.com/css2?family=Nabla:EDPT,EHLT@30..200,24&display=swap"); */

@@ -75,9 +75,9 @@ export default function Carousel({ id, srcs, laptopFrame }: Props) {
                     </div>
                     <div ref={viewRef} className={`${styles.view} hide-scrollbar overflow-hidden`}>
                         {srcs.map((src, index) =>
-                            // <iframe key={src + index} src={src} frameBorder={0}></iframe>
+                            <iframe key={src + index} src={src} frameBorder={0}></iframe>
                             // DEV:
-                            <div id={id + "-view--element" + index} className={laptopFrame ? "" : " bg-gray"} key={id + src + index}><img src={src} alt="" /></div>
+                            // <div id={id + "-view--element" + index} className={laptopFrame ? "" : " bg-gray"} key={id + src + index}><img src={src} alt="" /></div>
                         )}
                     </div>
                 </div>
@@ -87,7 +87,7 @@ export default function Carousel({ id, srcs, laptopFrame }: Props) {
             </div>
 
             <button className={`${styles.buttonNext} bg-blur`} onClick={() => goto()} disabled={activeViewIndex === srcs.length - 1}>
-                <img src="/icons/triangle-right.svg" alt="" />
+                <img src="/icons/triangle-right.svg" alt="triangle" />
             </button>
         </div>
     )
