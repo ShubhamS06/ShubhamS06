@@ -22,7 +22,7 @@ export const toolsIKnowData = {
         {
             title: "Code Editors and IDEs:",
             topTools: [
-                { name: "VS Code", icon: "/toosIcons/vs_code.jpg", value: 9, position: "left", isSpin : true },
+                { name: "VS Code", icon: "/toosIcons/vs_code.jpg", value: 9, position: "left", },
                 { name: "PyCharm", icon: "/toosIcons/PyCharm_Icon.png", value: 5, position: "right", },
             ]
         },
@@ -30,7 +30,7 @@ export const toolsIKnowData = {
             title: "Version Control:",
             topTools: [
                 { name: "GitLab", icon: "/toosIcons/gitlab_icon.png", value: 7, position: "left" },
-                { name: "GitHub", icon: "/toosIcons/gitHub.webp", value: 6, position: "down" },
+                { name: "GitHub", icon: "/toosIcons/gitHub.webp", value: 6, position: "down", isSpin : true },
                 { name: "Bitbucket", icon: "/toosIcons/bitbucketIcon.jpg", value: 3, position: "right" },
                 { name: "Git", icon: "/toosIcons/iconGit.png", value: 7, position: "down" },
             ]
@@ -61,7 +61,7 @@ export const toolsIKnowData = {
         {
             title: "Debugging Tools:",
             topTools: [
-                { name: "Chrome DevTools", icon: "/toosIcons/chromDev.webp", value: 7, position: "left" },
+                { name: "Chrome DevTools", icon: "/toosIcons/chromDev.webp", value: 7, position: "left", isSpin : true },
                 { name: "Firefox DevTools", icon: "/toosIcons/fireFox.jpg", value: 7, position: "right" },
         
             ]
@@ -77,7 +77,7 @@ export const toolsIKnowData = {
         {
             title: "Containerization and Orchestration:",
             topTools: [
-                { name: "Kubernetes", icon: "/toosIcons/kubernetes_logo.png", value: 5, position: "left" },
+                { name: "Kubernetes", icon: "/toosIcons/kubernetes_logo.png", value: 5, position: "left", isSpin : true },
                 { name: "Docker", icon: "/toosIcons/docker_icon.webp", value: 3, position: "right" },
                
             ]
