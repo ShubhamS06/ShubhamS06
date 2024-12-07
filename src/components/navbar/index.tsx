@@ -7,10 +7,10 @@ import { debounce } from "utiljs-pro"
 export default function Navbar() {
     const ctx = useContext(SectionContext)
     const [showNavlinks, setShowNavlinks] = useState(false)
-    const [showDialog, setShowDialog] = useState(false)
+    // const [showDialog, setShowDialog] = useState(false)
 
     const toggleShowNavlinks = debounce(() => setShowNavlinks(!showNavlinks), 200)
-    const toggleShowDialog = debounce(() => setShowDialog(!showDialog), 200)
+    // const toggleShowDialog = debounce(() => setShowDialog(!showDialog), 200)
 
     return (
         <div className={`${styles.navbar} flex items-center justify-between`}>
