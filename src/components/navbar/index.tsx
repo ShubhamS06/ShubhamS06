@@ -1,5 +1,5 @@
 import { useContext, useState } from "react"
-import { brandName, navLinks } from "../../constants"
+import { brandName, navLinks, user } from "../../constants"
 import styles from "./navbar.module.css"
 import { SectionContext } from "../../utils/sectionContext"
 import { debounce } from "utiljs-pro"
@@ -16,7 +16,8 @@ export default function Navbar() {
         <div className={`${styles.navbar} flex items-center justify-between`}>
             <div className={`${styles.left} flex items-center`}>
                 <img  className={`${styles.brandImg} ${styles.brand}`}  src="/shubhamBgr.png" alt="" />
-                Welcome to<span className={`${styles.brandname} capitalize`}>{brandName}</span>
+               <p className="desktopOnly">Welcome to <span className={`${styles.brandname} capitalize`}> {brandName}</span></p> 
+               <p className="mobOnly">{user.name}</p> 
             </div>
             <button data-is="toggler" data-toggled={showNavlinks}
                     onClick={toggleShowNavlinks}

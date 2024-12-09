@@ -150,3 +150,8 @@
         transform: rotate(360deg);
     }
 }
+@media only screen and (max-width: 700px) {
+    .greet {
+        font-size: 12vh;
+    }
+}
