@@ -7,6 +7,7 @@
 
 .card {
     width: 18vw;
+    min-width: 18rem;
     gap: .5rem;
 }
 
@@ -44,16 +45,25 @@
     background: linear-gradient(132.5deg, rgba(239, 239, 239, 0.12) -24.93%, rgba(255, 255, 255, 0.02) 109.66%);
     border-radius: 1.66rem;
 }
-
 .card {
-    padding-bottom: .2rem;
-    min-height: 30vh ;
+    padding-bottom: 0.2rem;
+    min-height: 30vh;
 }
+
 .container [data-hide] {
     transition: 1s all;
-    transition-delay: .2s;
+    transition-delay: 0.2s;
+}
+.container [data-hide="hidden"] {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
+.container [data-hide="visible"] {
+    opacity: 1;
+    transform: translateY(0);
+}
 .container[data-visible="false"] [data-hide] {
     opacity: 0;
 }
@@ -70,3 +80,9 @@
     transform: translateY(50%);
 }
 
+
+@media screen and (max-width: 700px) {
+/* .card {
+    min-width: 18rem;
+} */
+}

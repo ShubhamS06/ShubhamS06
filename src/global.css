@@ -51,19 +51,14 @@ hr {
   padding: 0;
 }
 
-@media screen and (max-width: 1500px) {
-  :root {
-    font-size: 12px;
-  }
-}
 
 
 /* ************************Text animation************ */
-
+/* 
 h1 {
   font-size: 12vw;
   font-family: Nabla;
-}
+} */
 
 @font-palette-values --Nabla {
   font-family: Nabla;
@@ -241,3 +236,28 @@ body {
   border-radius: 100% / 0% 0% 70% 70%;
   background-color: var(--white);
 }
+
+
+/* Text animation hover */
+h1{
+  cursor: pointer
+}
+h1 span{
+  transition: .5s linear
+}
+h1:hover span:nth-child(1){
+  margin-right: 5px
+}
+/* h1:hover span:nth-child(1):after{
+  content: "'";
+} */
+h1:hover span:nth-child(2){
+  margin-left: 30px
+}
+h1:hover span{
+  color: #fff;
+  text-shadow: 0 0 10px #fff,
+               0 0 20px #fff, 
+               0 0 40px #fff;
+}
+/*made with ❤, by qpi65*/

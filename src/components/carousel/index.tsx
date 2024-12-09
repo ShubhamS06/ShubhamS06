@@ -75,9 +75,9 @@ export default function Carousel({ id, srcs, laptopFrame }: Props) {
                     </div>
                     <div ref={viewRef} className={`${styles.view} hide-scrollbar overflow-hidden`}>
                         {srcs.map((src, index) =>
-                            <iframe key={src + index} src={src} frameBorder={0}></iframe>
+                            // <iframe style={{width:'100%'}} key={src + index} src={src} frameBorder={0}></iframe>
                             // DEV:
-                            // <div id={id + "-view--element" + index} className={laptopFrame ? "" : " bg-gray"} key={id + src + index}><img src={src} alt="" /></div>
+                            <div style={{width:'100%'}} id={id + "-view--element" + index} className={laptopFrame ? "" : " bg-gray"} key={id + src + index}><img src={src} alt="" /></div>
                         )}
                     </div>
                 </div>

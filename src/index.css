@@ -11,8 +11,8 @@
 }
 .tech_logos {
     /* animation: spin 2s linear infinite; */
-    height: 80px;
-    width: 80px;
+    height: 50px;
+    width: 50px;
     background: #fff;
     padding: 10px;
     border-radius: 10px;
@@ -84,4 +84,32 @@
     color: black;
     opacity: 1;
     z-index: 2;
+}
+
+.overviewTextSection{
+  font-size: x-large;
+}
+.desktopOnly{
+  display: block;
+}
+.mobOnly{
+  display: none;
+}
+@media screen and (max-width: 700px) {
+  :root {
+    font-size: 12px;
+  }
+  .desktopOnly{
+    display: none;
+  }
+  .mobOnly{
+    display: block;
+    font-size: 1.5rem;
+  }
+  .grid-center-child{
+    padding-top: 1rem;
+  }
+  .overviewTextSection{
+    font-size: medium;
+  }
 }
